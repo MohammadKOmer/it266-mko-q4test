@@ -185,32 +185,7 @@ entityDef weapon_machinegun
 
 entityDef weapon_machinegun_mp
 {
-	"inherit"				"weapon_machinegun"
-	"clipsize"				"0"
-  	"def_mod1"				""
-  	"inv_icon"				"gfx/guis/hud/icons/item_machinegun_colored"
-	"triggerSize"				"32"
-  	
-  	// use q3 style spread in MP
-  	"machinegunSpreadStyle"			"1"
-  	"spread"				"200"
-  	"spreadZoom"				"150"
-  	"editor_ignore"				"1"
-  	
-	"hidesurface"				"models/weapons/machinegun/clip_large"
-	  	
-  	"muzzle_kick_time"			"0"
-	"muzzle_kick_maxtime"			"0"
-	"muzzle_kick_angles"			"0 0 0"
-	"muzzle_kick_offset"			"0 0 0"
-	"recoilTime"				"0"
-	"recoilAngles"				"0 0 0"
-	"def_hitscan"				"hitscan_bullet_mp"
-	"def_althitscan"			"hitscan_zoomed_bullet_mp"
-	"altFireRate"				".2"
-	
-	"respawn_Team DM"			"30"
-	"respawn_Tourney"			"15"
+	"inherit"				"weapon_grenadelauncher_mp"
 }
 
 entityDef weapon_blaster_gui
