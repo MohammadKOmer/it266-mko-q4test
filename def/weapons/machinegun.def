@@ -129,7 +129,7 @@ entityDef weapon_machinegun
 	// ---------------------------- Muzzleflash ---------------------------------------
 
 	"mtr_flashShader"			"lights/muzzleflash"
-	"flashColor"				"1 0.8 0.4"
+	"flashColor"				"0.7 0.8 1"
 	"flashRadius"				"200"
 	"flashPointLight"			"1"
 	"flashTime"					".1"
@@ -154,12 +154,12 @@ entityDef weapon_machinegun
 	"snd_zoomIn"				"weapon_machinegun_scope_in"
 	"snd_zoomOut"				"weapon_machinegun_scope_out"
 	"snd_quaddamage"			"weapon_quaddamage_fire"
-	"snd_bolt"					"weapon_machinegun_bolt"
+	"snd_bolt"					"weapon_hyperblaster_spinfast"
 	"snd_acquire"				"pickup_weapon"
 	"snd_noAmmo"				"weapon_machinegun_dryfire"
 	
-  	"fx_muzzleflash"			"effects/weapons/machinegun/muzzleflash.fx"
-  	"fx_muzzleflash_world"		"effects/weapons/machinegun/muzzleflash.fx"
+  	"fx_muzzleflash"			"effects/weapons/hyperblaster/muzzleflash.fx"
+ 	"fx_muzzleflash_world"		"effects/weapons/hyperblaster/muzzleflash.fx"
 	"fx_respawn"				"effects/mp/itemrespawn.fx"
 
 	"def_viewStyle"				"viewStyle_q3_machinegun"
@@ -185,7 +185,32 @@ entityDef weapon_machinegun
 
 entityDef weapon_machinegun_mp
 {
-	"inherit"				"weapon_grenadelauncher_mp"
+	"inherit"				"weapon_machinegun"
+	"clipsize"				"0"
+  	"def_mod1"				""
+  	"inv_icon"				"gfx/guis/hud/icons/item_machinegun_colored"
+	"triggerSize"				"32"
+  	
+  	// use q3 style spread in MP
+  	"machinegunSpreadStyle"			"1"
+  	"spread"				"200"
+  	"spreadZoom"				"150"
+  	"editor_ignore"				"1"
+  	
+	"hidesurface"				"models/weapons/machinegun/clip_large"
+	  	
+  	"muzzle_kick_time"			"0"
+	"muzzle_kick_maxtime"			"0"
+	"muzzle_kick_angles"			"0 0 0"
+	"muzzle_kick_offset"			"0 0 0"
+	"recoilTime"				"0"
+	"recoilAngles"				"0 0 0"
+	"def_hitscan"				"hitscan_bullet_mp"
+	"def_althitscan"			"hitscan_zoomed_bullet_mp"
+	"altFireRate"				".2"
+	
+	"respawn_Team DM"			"30"
+	"respawn_Tourney"			"15"
 }
 
 entityDef weapon_blaster_gui
@@ -312,21 +337,21 @@ entityDef hitscan_bullet
 {
 	"range"						"40000"
 
-	"fx_impact"				"effects/weapons/machinegun/impact_default.fx"
+	"fx_impact"				"effects/weapons/hyperblaster/impact_default.fx"
 	"fx_impact_water"			"effects/ambient/splash_smll.fx"
-	"fx_impact_concrete"			"effects/weapons/machinegun/impact_concrete.fx"
-	"fx_impact_rock"			"effects/weapons/machinegun/impact_concrete.fx"
+	"fx_impact_concrete"		"effects/weapons/hyperblaster/impact_concrete.fx"
+	"fx_impact_rock"		"effects/weapons/hyperblaster/impact_concrete.fx"
 	"fx_impact_electronics"			"effects/weapons/machinegun/impact_electronics.fx"
 	"fx_impact_flesh"			"effects/weapons/machinegun/impact_flesh.fx"						
 	"fx_impact_glass"			"effects/weapons/machinegun/impact_glass.fx"
 	"fx_impact_monstermetal"		"effects/weapons/machinegun/impact_monstermetal.fx"
 	"fx_impact_bpglass"			"effects/weapons/machinegun/impact_bpglass.fx"
-	"fx_impact_mp"				"effects/weapons/machinegun/impact_default_mp.fx"
+	"fx_impact_mp"			"effects/weapons/hyperblaster/impact_default_mp.fx"
 	"fx_impact_concrete_mp"			"effects/weapons/machinegun/impact_default_mp.fx"
-	"fx_impact_rock_mp"			"effects/weapons/machinegun/impact_default_mp.fx"
-	"fx_impact_glass_mp"			"effects/weapons/machinegun/impact_default_mp.fx"
-	"fx_impact_bpglass_mp"			"effects/weapons/machinegun/impact_default_mp.fx"
-	"fx_impact_electronics_mp"		"effects/weapons/machinegun/impact_default_mp.fx"
+	"fx_impact_rock_mp"		"effects/weapons/hyperblaster/impact_default_mp.fx"
+	"fx_impact_glass_mp"		"effects/weapons/hyperblaster/impact_default_mp.fx"
+	"fx_impact_bpglass_mp"		"effects/weapons/hyperblaster/impact_default_mp.fx"
+	"fx_impact_electronics_mp"	"effects/weapons/hyperblaster/impact_default_mp.fx"
 	
 	"def_damage"				"damage_machinegun"
 	"def_damage_flesh"			"damage_machinegun_flesh"

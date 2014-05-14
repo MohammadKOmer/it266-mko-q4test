@@ -123,8 +123,8 @@ entityDef weapon_shotgun
 	"flashViewOffset"			"15 -5 -5"
 
 	"fx_eject"				"effects/weapons/shotgun/eject.fx"
-  	"fx_muzzleflash"			"effects/weapons/shotgun/muzzleflash.fx"		
-  	"fx_muzzleflash_world"			"effects/weapons/shotgun/muzzleflash_world.fx"		
+  	"fx_muzzleflash"			"effects/weapons/hyperblaster/muzzleflash.fx"
+ 	"fx_muzzleflash_world"		"effects/weapons/hyperblaster/muzzleflash.fx"
 	"fx_respawn"				"effects/mp/itemrespawn.fx"
 
 	"def_viewStyle"				"viewStyle_q3_shotgun"
@@ -155,7 +155,7 @@ entityDef weapon_shotgun_mp
 	"hidesurface"				"models/weapons/shotgun/clip"
 	// q3 style spread
 	"shotgunSpreadStyle"			"1"
-	"spread"				"700"
+	"spread"				"500"
 	"hitscans"				"11"
 	"editor_ignore"				"1"
 	"range"					"131072"
@@ -311,12 +311,12 @@ entityDef hitscan_shotgun_pellet
 	"fx_impact_glass"			"effects/weapons/shotgun/impact_glass.fx"
 	"fx_impact_bpglass"			"effects/weapons/shotgun/impact_bpglass.fx"
 	"fx_impact_monstermetal"		"effects/weapons/shotgun/impact_monstermetal.fx"
-	"fx_impact_mp"				"effects/weapons/shotgun/impact_default_mp.fx"
-	"fx_impact_concrete_mp"			"effects/weapons/shotgun/impact_default_mp.fx"
-	"fx_impact_rock_mp"			"effects/weapons/shotgun/impact_default_mp.fx"
-	"fx_impact_glass_mp"			"effects/weapons/shotgun/impact_default_mp.fx"
-	"fx_impact_bpglass_mp"			"effects/weapons/shotgun/impact_default_mp.fx"
-	"fx_impact_electronics_mp"		"effects/weapons/shotgun/impact_default_mp.fx"
+	"fx_impact_mp"			"effects/weapons/hyperblaster/impact_default_mp.fx"
+	"fx_impact_concrete_mp"		"effects/weapons/hyperblaster/impact_default_mp.fx"
+	"fx_impact_rock_mp"		"effects/weapons/hyperblaster/impact_default_mp.fx"
+	"fx_impact_glass_mp"		"effects/weapons/hyperblaster/impact_default_mp.fx"
+	"fx_impact_bpglass_mp"		"effects/weapons/hyperblaster/impact_default_mp.fx"
+	"fx_impact_electronics_mp"	"effects/weapons/hyperblaster/impact_default_mp.fx"
 	"def_damage"				"damage_pellet"
 	"def_damage_flesh"			"damage_pellet"
 	// for multiplayer clients. we only sync the hitscan def
